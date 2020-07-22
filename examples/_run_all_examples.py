@@ -7,4 +7,4 @@ import os
 examples = [f for f in os.listdir('.') if f.endswith(".py")
                                        and not f.startswith('_')]
 for f in examples:
-    execfile(f)
+    exec(open(f).read())
